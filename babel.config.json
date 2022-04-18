@@ -1,0 +1,13 @@
+{
+    //preset env es para compilar en JS que entiendan los navegadores (se crea una entrada en package.json con la lista de naveadores)
+    // preset react es para compilar en js los jsx
+    "presets": [
+        ["@babel/preset-env", {
+            "corejs": 3.21, //se añade este objeto paa meter los polyfills s hace falta, agregarlo antes al rpyecto con npm i core-js (es uns dependencia que añade codigo a prodccion)
+            "useBuiltIns": "usage"
+        }], 
+        ["@babel/preset-react", {
+            "runtime": "automatic"   //hace el import react de forma automatica en los jsx (si que hace falta añadir hooks)
+        }]
+    ]
+}
